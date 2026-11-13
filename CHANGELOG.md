@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+### Fixed
+- `select(limit_rows=0)` returned the whole table on non-partitioned tables. It now returns an empty result, like the partitioned path.
+- `select(columns=..., internal_row_id=True)` appended `$row_id` to the caller's `columns` list, so reusing the list added it again.
+
 ## [2.3.0] (2026-05-11)
 [2.3.0]: https://github.com/vast-data/vastdb_sdk/compare/v2.1.0...v2.3.0
 

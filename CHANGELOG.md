@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+### Changed
+- Allow `protobuf` 5.x and 6.x (`>=4.25.0,<7.0.0`). The `<5.0.0` pin blocked the fix for CVE-2026-0994 (GHSA-7gcm-g887-7qv7), which is only available in protobuf 5.29.6 / 6.33.5. The bundled 4.25 gencode works unchanged on both.
+
 ## [2.3.0] (2026-05-11)
 [2.3.0]: https://github.com/vast-data/vastdb_sdk/compare/v2.1.0...v2.3.0
 
